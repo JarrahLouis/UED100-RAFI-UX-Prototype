@@ -652,14 +652,14 @@ the reservation journey.
 
 Evidence:
 
-- Wireframes/RAFI_Mobile_Wireframe.png
-- Wireframes/RAFI_Desktop_Wireframe.png
+- Wireframes/Mobile - RAFI North Sydney.png
+- Wireframes/Desktop - RAFI North Sydney.png
 
 Figma design:
-[Insert sharing link]
+(https://www.figma.com/design/pzGVRCAuj9jtx5QNlpZJqz/UED100---RAFI-North-Sydney-UX-Prototype?node-id=1-3&t=nFp5nup7Unacz07b-1)
 
 Status:
-Completed once exports and link are verified.
+Completed — mobile and desktop wireframes exported
 
 ---
 
@@ -764,9 +764,6 @@ Testing:
 - Desktop layout verification pending.
 - Updated Lighthouse audit pending.
 
-Image source and usage permission:
-[Record source and permission details]
-
 Status:
 Implemented - awaiting verification.
 
@@ -813,22 +810,27 @@ Testing:
 - Final SEO score: 91.
 
 Evaluation:
-Prioritising the above-the-fold photograph
-corresponded with improved Lighthouse
-performance in the subsequent audit.
+The initial image integration achieved a mobile
+Lighthouse Performance score of 87.
 
-The results support appropriate image-loading
-priority decisions, although individual
-Lighthouse scores may vary between runs.
+Changing the above-the-fold image from lazy to
+eager loading and adding high fetch priority
+corresponded with an improved score of 100.
 
-Evidence:
+Final mobile Lighthouse results:
 
-- Lighthouse_Mobile_With_Image_Initial.png
-- Lighthouse_Mobile_With_Image_Optimised.png
+- Performance: 100
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 91
+
+Limitations:
+Lighthouse results can vary between runs.
+The observed improvement does not establish
+that loading priority was the sole cause.
 
 Status:
-Image integrated and mobile Lighthouse
-performance verified.
+Completed and verified through mobile testing.
 
 ---
 
@@ -881,7 +883,6 @@ Lighthouse performance and responsive testing.
 
 ### Remaining
 
-- [ ] Verify APA 7 references.
 - [ ] Package final submission ZIP.
 
 ---
