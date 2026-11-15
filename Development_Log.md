@@ -1,5 +1,5 @@
-
 # UED100 - Assessment 2 - RAFI Sydney UX Prototype
+
 ## Development Log
 
 ### Project Overview
@@ -11,6 +11,7 @@ Improve the mobile menu and venue-specific reservation
 experience identified in Assessment 1.
 
 Technologies:
+
 - HTML5
 - CSS3
 - Vanilla JavaScript
@@ -53,6 +54,7 @@ verified restaurant content.
 Date: 12 November 2026
 
 Files created:
+
 - index.html
 - style.css
 - script.js
@@ -71,6 +73,7 @@ Addresses recommendations for improved
 accessibility and maintainable front-end code.
 
 Testing:
+
 - HTML page opened successfully in a browser.
 - Navigation links tested manually.
 - Page sections accessible through anchor links.
@@ -84,9 +87,11 @@ Status: Completed
 Date: 13 November 2026
 
 Files modified:
+
 - style.css
 
 Changes:
+
 - Introduced reusable CSS colour variables.
 - Applied RAFI-inspired branding.
 - Styled header, navigation and footer.
@@ -103,12 +108,14 @@ Addresses issues concerning mobile readability
 and unclear keyboard focus indicators.
 
 Testing:
+
 - CSS successfully loaded in browser.
 - Brand colours and layout visually checked.
 - Keyboard Tab navigation tested successfully.
 - Focus indicators confirmed visible.
 
 Further testing required:
+
 - Mobile viewport testing.
 - Colour contrast evaluation.
 - Screen-reader testing.
@@ -123,10 +130,12 @@ Status: Completed initial implementation
 Date: 14 November 2026
 
 Files modified:
+
 - index.html
 - style.css
 
 Changes:
+
 - Introduced clearly organised menu categories.
 - Created reusable menu-item structures.
 - Added separate elements for dish names and prices.
@@ -147,6 +156,7 @@ Addresses the identified difficulty distinguishing
 individual menu items on mobile devices.
 
 Technical decisions:
+
 - Semantic HTML for meaningful content structure.
 - CSS Flexbox for dish names and prices.
 - Reusable CSS classes for consistent formatting.
@@ -158,6 +168,7 @@ Dish names and prices are illustrative placeholders.
 They must not be presented as verified RAFI offerings.
 
 Testing:
+
 - All three menu categories display correctly
 - Dish names, descriptions, prices and dietary labels remain clearly distinguishable
 - At a narrow browser width, text wraps correctly.
@@ -166,17 +177,20 @@ Testing:
 - Recorded the 375 × 824 screenshot test
 
 Further testing required:
+
 - Check accessibility using Lighthouse.
 - Test keyboard interaction after adding collapsible menu categories.
 - Check layouts in additional browsers
 
 Evidence to preserve:
+
 - Screenshot of desktop menu layout.
 - Screenshot of mobile menu layout.
 
 Status: Completed initial implementation and manual layout checks.
 
 Next steps:
+
 - Verify the responsive menu layout.
 - Implement collapsible menu categories.
 - Add venue-specific booking navigation.
@@ -188,11 +202,13 @@ Next steps:
 Date: 15 November 2026
 
 Files modified:
+
 - index.html
 - style.css
 - script.js
 
 Changes:
+
 - Added interactive category buttons.
 - Introduced expandable menu content containers.
 - Added JavaScript event listeners.
@@ -212,6 +228,7 @@ Addresses the lengthy, text-heavy mobile menu
 and recommends more accessible interactions.
 
 Technical decisions:
+
 - Vanilla JavaScript for lightweight interaction.
 - CSS classes to control content visibility.
 - Native HTML buttons for keyboard accessibility.
@@ -222,6 +239,7 @@ Testing:
 Pending manual functional and accessibility checks.
 
 Evidence to preserve:
+
 - Screenshot of collapsed mobile categories.
 - Screenshot with multiple categories expanded.
 - Screenshot of visible keyboard focus.
@@ -230,11 +248,11 @@ Evidence to preserve:
 Status: Core interactions implemented; visual checks completed, remaining checks pending
 
 Next steps:
+
 - Complete interaction testing.
 - Check browser Console for errors.
 - Add venue-specific booking navigation.
 - Begin implementing the mobile navigation menu.
-
 
 Bug identified - Duplicate menu content
 
@@ -249,12 +267,14 @@ Legacy HTML from Entry 003 was not fully
 removed when implementing Entry 004.
 
 Correction implemented:
+
 - Identified obsolete HTML from Entry 003.
 - Removed the duplicated menu category markup.
 - Retained the interactive Entry 004 components.
 - Refreshed the page and visually checked the layout.
 
 Verification:
+
 - Duplicate menu content no longer visible.
 - Collapsed categories display correctly.
 - Expanded Desserts category displays its content.
@@ -277,10 +297,12 @@ of testing changes incrementally.
 Date: 15 November 2026
 
 Files modified:
+
 - index.html
 - style.css
 
 Changes:
+
 - Replaced general RAFI website link.
 - Introduced direct North Sydney booking link.
 - Added descriptive booking button text.
@@ -302,6 +324,7 @@ Addresses the primary usability issue identified
 during mobile booking journey analysis.
 
 Technical decisions:
+
 - Native HTML hyperlink rather than JavaScript.
 - HTTPS destination.
 - Descriptive link text for accessibility.
@@ -309,6 +332,7 @@ Technical decisions:
 - Responsive button styling using CSS.
 
 Testing:
+
 - Verified reservation button displays correctly
   in the 375 x 824 mobile viewport.
 - Followed the booking link to SevenRooms.
@@ -320,11 +344,13 @@ Testing:
 - Visually verified booking notice and layout.
 
 Further testing required:
+
 - Keyboard navigation and activation.
 - JavaScript-disabled navigation.
 - Cross-browser testing.
 
 Evidence:
+
 - Entry 005_Mobile.png
 - Entry 005_Mobile_Reservations.png
 
@@ -338,6 +364,7 @@ The unnecessary venue-reselection step has
 been eliminated from the prototype journey.
 
 Next steps:
+
 - Verify direct booking destination.
 - Implement responsive mobile navigation.
 - Prepare submission documentation.
@@ -349,11 +376,13 @@ Next steps:
 Date: 15 November 2026
 
 Files modified:
+
 - index.html
 - style.css
 - script.js
 
 Changes:
+
 - Added mobile navigation toggle button.
 - Implemented responsive navigation layout.
 - Introduced JavaScript show/hide functionality.
@@ -373,14 +402,15 @@ recommendations identified during the original
 website analysis.
 
 Technical decisions:
+
 - Semantic HTML navigation.
 - Native button for keyboard functionality.
 - CSS media queries for responsive behaviour.
 - JavaScript for conditional visibility.
 - Progressive enhancement for reliability.
 
-
 Testing:
+
 - Desktop navigation visually verified.
 - Mobile navigation tested at 375 x 824 pixels.
 - Hamburger button visible in collapsed state.
@@ -390,12 +420,14 @@ Testing:
 - No horizontal overflow observed in screenshots.
 
 Further testing required:
+
 - Keyboard activation using Enter and Space.
 - Navigation link behaviour.
 - JavaScript-disabled navigation.
 - Cross-browser compatibility.
 
 Evidence:
+
 - Entry 006_Desktop.png
 - Entry 006_Mobile.png
 - Entry 006_Mobile_Expanded.png
@@ -404,8 +436,8 @@ Status:
 Responsive navigation implemented and
 visually verified. Accessibility testing pending.
 
-
 Next steps:
+
 - Verify responsive behaviour.
 - Implement contact/enquiry form.
 - Complete final testing.
@@ -418,11 +450,13 @@ Next steps:
 Date: 15 November 2026
 
 Files modified:
+
 - index.html
 - style.css
 - script.js
 
 Changes:
+
 - Added a contact and enquiry form.
 - Added fields for name, email, enquiry
   type and message.
@@ -443,6 +477,7 @@ while maintaining the visual style of the
 RAFI prototype.
 
 Technical decisions:
+
 - Semantic HTML form elements.
 - CSS for responsive input layouts.
 - JavaScript event listeners and validation.
@@ -457,6 +492,7 @@ Production forms require server-side validation,
 secure transport and appropriate data handling.
 
 Testing:
+
 - Confirmed all four form fields display correctly.
 - Submitted an empty form and verified that
   field-specific validation messages appeared.
@@ -469,12 +505,14 @@ Testing:
 - Confirmed form fields reset after success.
 
 Further testing required:
+
 - Invalid email format and short message tests.
 - Keyboard navigation and focus behaviour.
 - Responsive testing at 375px width.
 - Cross-browser compatibility.
 
 Evidence:
+
 - Entry 007_Form_Empty.png
 - Entry 007_Form_Errors.png
 - Entry 007_Form_Success.png
@@ -485,6 +523,7 @@ verified. Remaining accessibility and responsive
 checks pending.
 
 Next steps:
+
 - Verify form functionality.
 - Complete responsive and accessibility tests.
 - Prepare the Figma wireframe and Git repository.
@@ -493,18 +532,19 @@ Next steps:
 
 ---
 
-
 ### Entry 008 - Code Review and Formatting
 
 Date: 15 November 2026
 
 Files reviewed:
+
 - index.html
 - style.css
 - script.js
 - Development_Log.md
 
 Changes:
+
 - Standardised indentation and code formatting.
 - Reviewed matching HTML tags.
 - Checked CSS and JavaScript organisation.
@@ -517,8 +557,8 @@ Consistent formatting and clear documentation
 improve readability, maintainability and
 the ability to identify coding errors.
 
-
 Testing:
+
 - Reviewed HTML indentation and element nesting.
 - Confirmed CSS formatting is consistent.
 - Checked JavaScript syntax successfully.
@@ -536,11 +576,13 @@ Final browser regression testing pending.
 Date: 15 November 2026
 
 Tools:
+
 - Git
 - GitHub
 - Visual Studio Code Source Control
 
 Changes:
+
 - Initialised a Git repository in the ASS2 folder.
 - Created the initial commit containing the
   working prototype and development documentation.
@@ -559,6 +601,7 @@ and successfully connected the local repository
 to the remote repository.
 
 Verification:
+
 - GitHub repository accessible.
 - RAFI_Prototype folder visible.
 - Testing_Evidence folder visible.
@@ -570,6 +613,222 @@ Repository:
 https://github.com/JarrahLouis/UED100-RAFI-UX-Prototype
 
 Status: Completed
+
+---
+
+### Entry 010 - Responsive Wireframe Design
+
+Date: 15 November 2026
+
+Tool:
+
+- Figma
+
+Design deliverables:
+
+- Mobile wireframe
+- Desktop wireframe
+
+Changes:
+
+- Created a mobile layout representing the
+  responsive RAFI North Sydney prototype.
+- Created a desktop layout with horizontal
+  navigation and a centred content area.
+- Represented expandable restaurant categories.
+- Included the direct reservation action.
+- Included the demonstration enquiry form.
+- Documented the main responsive differences.
+
+Design rationale:
+The wireframes demonstrate the proposed layout
+and information hierarchy before considering
+visual branding and detailed styling.
+
+They support the Assessment 1 recommendations
+to improve mobile readability, simplify menu
+navigation and reduce unnecessary steps in
+the reservation journey.
+
+Evidence:
+
+- Wireframes/RAFI_Mobile_Wireframe.png
+- Wireframes/RAFI_Desktop_Wireframe.png
+
+Figma design:
+[Insert sharing link]
+
+Status:
+Completed once exports and link are verified.
+
+---
+
+### Entry 011 - Lighthouse Mobile Audit
+
+Date: 15 November 2026
+
+Tool:
+
+- Google Chrome Lighthouse
+- VS Code Live Server
+
+Test environment:
+
+- Mobile Lighthouse simulation.
+- Prototype served over local HTTP.
+- Performance, Accessibility, Best Practices
+  and SEO categories enabled.
+
+Initial audit:
+
+- Performance: 70
+- Accessibility: 100
+- Best Practices: 96
+- SEO: 90
+
+Observation:
+Lighthouse warned that Chrome extensions
+negatively affected page-load performance.
+
+Clean audit:
+
+- Performance: 100
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 90
+
+Testing decision:
+Repeated the audit in Chrome Incognito to
+reduce interference from browser extensions.
+
+Assessment 1 comparison:
+The original RAFI website recorded mobile
+Performance 57 and Accessibility 77.
+
+The prototype achieved 100 for both in the
+clean Lighthouse audit. Results are not
+directly equivalent because the prototype
+contains less content and runs locally.
+
+Limitations:
+Automated accessibility scoring does not
+replace manual keyboard or screen-reader tests.
+Lighthouse scores may vary between test runs.
+
+Evidence:
+
+- Lighthouse_Mobile_Initial.png
+- Lighthouse_Mobile_Incognito.png
+
+Status:
+Mobile Lighthouse audit completed.
+
+---
+
+### Entry 012 - Multimedia Integration
+
+Date: 15 November 2026
+
+Files modified:
+
+- index.html
+- style.css
+- Assets/RAFI-Seafood-Platter-500x333.jpg
+
+Changes:
+
+- Added a RAFI food photograph to the menu.
+- Used semantic figure and figcaption elements.
+- Added descriptive alternative text.
+- Applied responsive image styling.
+- Preserved the image's aspect ratio.
+- Added loading and decoding attributes.
+
+Design rationale:
+Restaurant photography adds visual context
+and strengthens the connection between the
+prototype and RAFI's dining experience.
+
+The image is displayed separately from the
+illustrative menu items to avoid presenting
+sample dishes as genuine menu offerings.
+
+Performance considerations:
+The image uses a relatively small source file
+and responsive dimensions to limit unnecessary
+page weight.
+
+Testing:
+
+- Mobile layout verification pending.
+- Desktop layout verification pending.
+- Updated Lighthouse audit pending.
+
+Image source and usage permission:
+[Record source and permission details]
+
+Status:
+Implemented - awaiting verification.
+
+Performance testing:
+
+- Re-ran mobile Lighthouse after adding the image.
+- Performance: 87
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 91
+
+Observation:
+Performance decreased compared with the
+previous image-free prototype.
+
+Investigation:
+The photograph appears within the initial
+mobile viewport. Its loading priority was
+reviewed as a potential contributor to LCP.
+
+Further action:
+
+- Test eager loading and high fetch priority.
+- Record the subsequent Lighthouse results.
+- Preserve both reports for Assessment 3.
+
+Testing:
+
+- Confirmed restaurant photograph displays in
+  the mobile prototype.
+- Ran mobile Lighthouse after image integration.
+- Initial Performance score: 87.
+- Accessibility: 100.
+- Best Practices: 100.
+- SEO: 91.
+- Identified image loading priority as a
+  possible contributor to reduced performance.
+- Changed image loading from lazy to eager.
+- Added fetchpriority="high".
+- Repeated the mobile Lighthouse audit.
+- Final Performance score: 100.
+- Final Accessibility score: 100.
+- Final Best Practices score: 100.
+- Final SEO score: 91.
+
+Evaluation:
+Prioritising the above-the-fold photograph
+corresponded with improved Lighthouse
+performance in the subsequent audit.
+
+The results support appropriate image-loading
+priority decisions, although individual
+Lighthouse scores may vary between runs.
+
+Evidence:
+
+- Lighthouse_Mobile_With_Image_Initial.png
+- Lighthouse_Mobile_With_Image_Optimised.png
+
+Status:
+Image integrated and mobile Lighthouse
+performance verified.
 
 ---
 
@@ -598,10 +857,10 @@ Lighthouse performance and responsive testing.
 
 ---
 
-
 ## Outstanding Tasks
 
 ### Completed
+
 - [x] Establish semantic HTML structure.
 - [x] Implement RAFI-inspired CSS styling.
 - [x] Create structured restaurant menu.
@@ -615,13 +874,13 @@ Lighthouse performance and responsive testing.
 - [x] Complete keyboard accessibility checks.
 - [x] Test navigation with JavaScript disabled.
 - [x] Test mobile, tablet and desktop layouts.
+- [x] Complete wireframe documentation.
+- [x] Establish Git repository.
+- [x] Run Lighthouse accessibility and performance audits.
+- [x] Prepare 200-word technical rationale.
 
 ### Remaining
 
-- [ ] Run Lighthouse accessibility and performance audits.
-- [ ] Complete wireframe documentation.
-- [ ] Establish Git repository.
-- [ ] Prepare 200-word technical rationale.
 - [ ] Verify APA 7 references.
 - [ ] Package final submission ZIP.
 
@@ -630,6 +889,7 @@ Lighthouse performance and responsive testing.
 ## Assessment 3 Preparation
 
 Preserve:
+
 - Original prototype screenshots.
 - Records of design decisions.
 - Bugs and fixes.
@@ -638,4 +898,3 @@ Preserve:
 - Lighthouse audit results.
 
 ---
-

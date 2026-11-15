@@ -914,3 +914,37 @@ main .menu-category {
 nav a:hover {
   background-color: var(--color-orange-button);
 }
+
+/* ==========================================
+   SECTION 13: RESTAURANT PHOTOGRAPH
+
+   PURPOSE:
+   Integrate responsive restaurant imagery
+   while preserving the lightweight design.
+
+   ACCESSIBILITY AND PERFORMANCE:
+   - Responsive sizing prevents overflow.
+   - Natural aspect ratio is preserved.
+   - Caption provides additional context.
+   ========================================== */
+
+.menu-feature-image {
+  margin: 0 0 28px;
+}
+
+.menu-feature-image img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.menu-feature-image figcaption {
+  margin-top: 10px;
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
