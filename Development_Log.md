@@ -529,6 +529,47 @@ Status:
 Code formatting and documentation review completed.
 Final browser regression testing pending.
 
+---
+
+### Entry 009 - Git Version Control
+
+Date: 15 November 2026
+
+Tools:
+- Git
+- GitHub
+- Visual Studio Code Source Control
+
+Changes:
+- Initialised a Git repository in the ASS2 folder.
+- Created the initial commit containing the
+  working prototype and development documentation.
+- Published the repository to GitHub.
+- Configured the local main branch to track
+  the remote origin/main branch.
+
+Issue encountered:
+Git initially attempted to authenticate using
+a different GitHub account from the repository
+owner, resulting in a 403 permission error.
+
+Resolution:
+Corrected the GitHub authentication process
+and successfully connected the local repository
+to the remote repository.
+
+Verification:
+- GitHub repository accessible.
+- RAFI_Prototype folder visible.
+- Testing_Evidence folder visible.
+- Development_Log.md visible.
+- Main branch published successfully.
+- Local working tree clean at verification.
+
+Repository:
+https://github.com/JarrahLouis/UED100-RAFI-UX-Prototype
+
+Status: Completed
 
 ---
 
