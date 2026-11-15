@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>RAFI North Sydney | Menu</title>
+
+  <!-- Link to our CSS stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Website header -->
+  <header>
+    <h1>RAFI North Sydney</h1>
+  </header>
+
+  <!-- Main navigation -->
+
+  <!-- ==========================================
+     RESPONSIVE NAVIGATION - ENTRY 006
+
+     PURPOSE:
+     Provide accessible navigation on mobile
+     devices while retaining desktop links.
+
+     ACCESSIBILITY:
+     - Button supports keyboard activation.
+     - aria-expanded communicates menu state.
+     - aria-controls identifies the navigation.
+     - Links work without JavaScript.
+
+     UX CONNECTION:
+     Improves mobile navigation and maintains
+     clear pathways to menus and reservations.
+     ========================================== -->
+
+  <!-- Mobile navigation button.
+
+     Hidden by default using CSS, and shown
+     on small screens only when JavaScript
+     has enabled the collapsible navigation.
+-->
+
+  <button type="button" id="mobile-menu-button" class="mobile-menu-button" aria-expanded="false"
+    aria-controls="main-navigation" aria-label="Open navigation menu" hidden>
+    <span aria-hidden="true">☰</span>
+  </button>
+
+  <!-- Main navigation.
+
+     The links retain normal HTML behaviour,
+     so they remain usable without JavaScript.
+-->
+
+  <nav id="main-navigation" aria-label="Main navigation">
+    <a href="#menu">Our Menu</a>
+
+    <a href="#booking">Book a Table</a>
+
+    <!-- Direct link to the enquiry form. -->
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main page content -->
+  <main>
+    <!-- ==========================================
+     INTERACTIVE RESTAURANT MENU
+
+     UX PURPOSE:
+     Allow visitors to expand and collapse menu
+     categories, reducing unnecessary scrolling.
+
+     ACCESSIBILITY:
+     - Real buttons support keyboard operation.
+     - aria-expanded identifies open/closed state.
+     - aria-controls links buttons to their content.
+
+     PROGRESSIVE ENHANCEMENT:
+     All categories are visible by default.
+     JavaScript adds collapsing functionality.
+     ========================================== -->
+
+    <section id="menu" aria-labelledby="menu-heading">
+      <h2 id="menu-heading">Our Menu</h2>
+
+      <p class="menu-intro">
+        Explore our seasonal dishes and discover something delicious.
+      </p>
+
+      <!-- CATEGORY 1: SMALL PLATES -->
+      <section class="menu-category" aria-labelledby="small-plates-heading">
+        <h3 id="small-plates-heading">
+          <!-- The button controls the category
+                 content directly beneath it. -->
+
+          <button type="button" class="category-toggle" aria-expanded="true" aria-controls="small-plates-content">
+            <span>Small Plates</span>
+
+            <span class="toggle-icon" aria-hidden="true"></span>
+          </button>
+        </h3>
+
+        <!-- JavaScript will show/hide this
+             container when the button is used. -->
+
+        <div id="small-plates-content" class="menu-content">
+          <article class="menu-item">
+            <div class="menu-item-header">
+              <h4>Seasonal Vegetable Plate</h4>
+              <span class="menu-price">$18</span>
+            </div>
+
+            <p>
+              Fresh seasonal vegetables with herbs and house-made dressing.
+            </p>
+
+            <span class="dietary-label"> Vegetarian </span>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item-header">
+              <h4>House-Made Flatbread</h4>
+              <span class="menu-price">$14</span>
+            </div>
+
+            <p>Warm flatbread served with a selection of house-made dips.</p>
+
+            <span class="dietary-label"> Vegetarian </span>
+          </article>
+        </div>
+      </section>
+
+      <!-- CATEGORY 2: LARGER PLATES -->
+      <section class="menu-category" aria-labelledby="large-plates-heading">
+        <h3 id="large-plates-heading">
+          <button type="button" class="category-toggle" aria-expanded="true" aria-controls="large-plates-content">
+            <span>Larger Plates</span>
+
+            <span class="toggle-icon" aria-hidden="true"></span>
+          </button>
+        </h3>
+
+        <div id="large-plates-content" class="menu-content">
+          <article class="menu-item">
+            <div class="menu-item-header">
+              <h4>Roasted Seasonal Vegetables</h4>
+              <span class="menu-price">$32</span>
+            </div>
+
+            <p>
+              Roasted vegetables served with grains and seasonal
+              accompaniments.
+            </p>
+
+            <span class="dietary-label"> Vegetarian </span>
+          </article>
+        </div>
+      </section>
+
+      <!-- CATEGORY 3: DESSERTS -->
+      <section class="menu-category" aria-labelledby="desserts-heading">
+        <h3 id="desserts-heading">
+          <button type="button" class="category-toggle" aria-expanded="true" aria-controls="desserts-content">
+            <span>Desserts</span>
+
+            <span class="toggle-icon" aria-hidden="true"></span>
+          </button>
+        </h3>
+
+        <div id="desserts-content" class="menu-content">
+          <article class="menu-item">
+            <div class="menu-item-header">
+              <h4>Seasonal Fruit Dessert</h4>
+              <span class="menu-price">$16</span>
+            </div>
+
+            <p>
+              A seasonal dessert featuring fresh fruit and a sweet
+              accompaniment.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- End of interactive restaurant menu.
+         Booking functionality is provided
+         in the separate Reservations section. -->
+    </section>
+
+    <!-- ==========================================
+            VENUE-SPECIFIC RESERVATIONS
+
+            UX PURPOSE:
+            Allow customers to proceed directly to
+            RAFI North Sydney reservations without
+            repeating their venue selection.
+
+            ASSESSMENT 1 CONNECTION:
+            The original menu directed visitors to
+            a shared venue-selection page.
+
+            ACCESSIBILITY AND SECURITY:
+            - Descriptive link identifies the venue.
+            - Native HTML link works without JavaScript.
+            - HTTPS protects data during transmission.
+            - External destination is clearly explained.
+            ========================================== -->
+
+    <section id="booking" aria-labelledby="booking-heading">
+      <h2 id="booking-heading">Reservations</h2>
+
+      <p>Ready to join us at RAFI North Sydney?</p>
+
+      <!-- Direct link to RAFI North Sydney's
+                existing SevenRooms reservation page.
+
+                No customer information is collected
+                or stored by this prototype.
+            -->
+
+      <a href="https://www.sevenrooms.com/explore/rafi/reservations/create/search/" class="booking-button">
+        Book RAFI North Sydney
+      </a>
+
+      <!-- Explain that the booking process
+                continues on an external service. -->
+
+      <p class="booking-notice">
+        Reservations are managed securely through SevenRooms. Selecting the
+        button will take you to their booking website.
+      </p>
+    </section>
+
+    <!-- ==========================================
+     CONTACT AND ENQUIRY FORM - ENTRY 007
+
+     PURPOSE:
+     Demonstrate accessible form design,
+     client-side validation and user feedback.
+
+     SECURITY:
+     This is a front-end demonstration only.
+     No personal information is transmitted
+     to a server or stored by the prototype.
+
+     ACCESSIBILITY:
+     - Each field has an associated label.
+     - Required fields are clearly identified.
+     - Validation errors are displayed in text.
+     - A live region announces form feedback.
+     ========================================== -->
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact RAFI North Sydney</h2>
+
+      <p>Have a question? Send us an enquiry.</p>
+
+      <p class="form-disclaimer">
+        Prototype demonstration only. No enquiry will actually be sent. Please
+        do not enter real personal information.
+      </p>
+
+      <!-- The form is handled entirely in the browser.
+
+         novalidate disables the browser's default
+         error pop-ups so our JavaScript can display
+         consistent, accessible error messages.
+    -->
+
+      <form id="contact-form" novalidate>
+        <!-- NAME FIELD -->
+
+        <div class="form-group">
+          <label for="contact-name"> Your name (required) </label>
+
+          <input type="text" id="contact-name" name="name" autocomplete="off" required aria-describedby="name-error" />
+
+          <span id="name-error" class="field-error"></span>
+        </div>
+
+        <!-- EMAIL FIELD -->
+
+        <div class="form-group">
+          <label for="contact-email"> Email address (required) </label>
+
+          <input type="email" id="contact-email" name="email" autocomplete="off" required
+            aria-describedby="email-error" />
+
+          <span id="email-error" class="field-error"></span>
+        </div>
+
+        <!-- ENQUIRY TYPE -->
+
+        <div class="form-group">
+          <label for="enquiry-type"> Enquiry type (required) </label>
+
+          <select id="enquiry-type" name="enquiryType" required aria-describedby="type-error">
+            <option value="">Please select an option</option>
+
+            <option value="general">General enquiry</option>
+
+            <option value="event">Private event</option>
+
+            <option value="accessibility">Accessibility enquiry</option>
+          </select>
+
+          <span id="type-error" class="field-error"></span>
+        </div>
+
+        <!-- MESSAGE FIELD -->
+
+        <div class="form-group">
+          <label for="contact-message"> Your message (required) </label>
+
+          <textarea id="contact-message" name="message" rows="5" maxlength="1000" required
+            aria-describedby="message-error"></textarea>
+
+          <span id="message-error" class="field-error"></span>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+
+        <button type="submit" class="submit-button">Send enquiry</button>
+
+        <!-- FORM STATUS MESSAGE
+
+             role="status" allows assistive
+             technology to announce updates.
+        -->
+
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Website footer -->
+  <footer>
+    <p>RAFI North Sydney - UX Prototype</p>
+  </footer>
+
+  <!-- Link to our JavaScript file -->
+  <script src="script.js"></script>
+</body>
+
+</html>

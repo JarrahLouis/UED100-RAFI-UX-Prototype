@@ -1,0 +1,916 @@
+/* ==========================================
+   RAFI NORTH SYDNEY - UX PROTOTYPE
+   UED100 - ASSESSMENT 2
+
+   PURPOSE:
+   This stylesheet controls the appearance
+   and responsive layout of our prototype.
+
+   DESIGN OBJECTIVES:
+   1. Preserve RAFI's warm visual identity.
+   2. Improve mobile readability.
+   3. Provide accessible navigation.
+   4. Maintain consistent styling.
+   ========================================== */
+
+/* ==========================================
+   SECTION 1: GLOBAL STYLES
+   ========================================== */
+
+/* Define reusable brand colours.
+
+   CSS variables allow us to change a colour
+   once and have it update throughout the site.
+
+   These are approximate colours inspired by
+   RAFI's branding, not official brand values.
+*/
+
+:root {
+  --color-brown: #42261c;
+  --color-orange: #e96b22;
+  --color-cream: #f6ecdf;
+  --color-white: #ffffff;
+  --color-text: #38261e;
+}
+
+/* Apply border-box sizing to all elements.
+
+   This makes layout calculations easier:
+   padding and borders are included in an
+   element's specified width.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the overall webpage.
+
+   Margin removes the browser's default gap.
+   Font-family provides readable text.
+   Line-height improves paragraph spacing.
+*/
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+
+  background-color: var(--color-cream);
+  color: var(--color-text);
+}
+
+/* ==========================================
+   SECTION 2: HEADER AND NAVIGATION
+   ========================================== */
+
+/* Style the main website header.
+
+   The brown background and orange heading
+   reflect RAFI's existing visual identity.
+*/
+
+header {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+
+  padding: 24px 20px;
+  text-align: center;
+}
+
+/* Style the main page heading.
+
+   Remove default heading margins to create
+   consistent spacing inside the header.
+*/
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: var(--color-orange);
+}
+
+/* Arrange navigation links horizontally.
+
+   Flexbox allows the links to be centred
+   and evenly spaced across the screen.
+*/
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  background-color: var(--color-brown);
+  padding: 12px 16px 20px;
+}
+
+/* Make navigation links easier to identify.
+
+   Generous padding also increases the
+   clickable area for touchscreen users.
+*/
+
+nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: bold;
+
+  padding: 12px 16px;
+  border-radius: 4px;
+
+  transition: background-color 0.2s ease;
+}
+
+/* Provide visual feedback when someone
+   hovers over a navigation link.
+*/
+
+nav a:hover {
+  background-color: var(--color-orange);
+}
+
+/* ==========================================
+   SECTION 3: MAIN CONTENT
+   ========================================== */
+
+/* Restrict the content width on large screens.
+
+   A maximum width prevents text from becoming
+   difficult to read on wide desktop monitors.
+
+   Auto margins centre the content.
+*/
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Give each content section a distinct area.
+
+   Spacing and a white background help users
+   distinguish separate parts of the page.
+*/
+
+main section {
+  background-color: var(--color-white);
+
+  padding: 24px;
+  margin-bottom: 24px;
+
+  border-radius: 8px;
+}
+
+/* Apply consistent heading styles.
+
+   Visual hierarchy helps users scan content
+   and find important information quickly.
+*/
+
+h2 {
+  margin-top: 0;
+  color: var(--color-brown);
+  font-size: 24px;
+}
+
+/* Provide comfortable paragraph spacing. */
+
+p {
+  margin-bottom: 16px;
+}
+
+/* ==========================================
+   SECTION 4: LINKS AND ACCESSIBILITY
+   ========================================== */
+
+/* Style the reservation link as a button.
+
+   The orange background makes the booking
+   action visually prominent.
+
+   The link remains a normal HTML hyperlink,
+   so navigation works without JavaScript.
+*/
+
+#booking a {
+  display: inline-block;
+
+  background-color: var(--color-orange);
+  color: var(--color-white);
+
+  padding: 14px 20px;
+  border-radius: 4px;
+
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Show feedback when hovering over the
+   reservation link.
+*/
+
+#booking a:hover {
+  background-color: var(--color-brown);
+}
+
+/* Make keyboard focus clearly visible.
+
+   This directly addresses the difficulty
+   identifying focused navigation elements
+   found during Assessment 1 testing.
+
+   :focus-visible displays an outline when
+   keyboard interaction requires one.
+*/
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #176b91;
+  outline-offset: 4px;
+}
+
+/* Respect users who prefer reduced motion.
+
+   This accessibility setting disables our
+   decorative transitions where requested.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  nav a {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   SECTION 5: RESPONSIVE DESIGN
+   ========================================== */
+
+/* Mobile-first styling is already provided
+   by the global rules above.
+
+   The following media query adds adjustments
+   for screens 768px wide or larger.
+*/
+
+@media (min-width: 768px) {
+  /* Increase heading size on larger screens. */
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  /* Provide additional space around
+       content on tablets and desktops. */
+
+  main {
+    padding: 40px 24px;
+  }
+
+  /* Increase section spacing when there
+       is more room available. */
+
+  main section {
+    padding: 36px;
+  }
+}
+
+/* ==========================================
+   SECTION 6: FOOTER
+   ========================================== */
+
+/* Keep the footer visually consistent with
+   the header and centre its content.
+*/
+
+footer {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+
+  text-align: center;
+  padding: 20px;
+}
+
+/* Remove unnecessary paragraph spacing
+   inside the footer.
+*/
+
+footer p {
+  margin: 0;
+}
+
+/* ==========================================
+   SECTION 7: RESTAURANT MENU
+
+   PURPOSE:
+   Improve menu readability through clear
+   categories, spacing and visual hierarchy.
+
+   ASSESSMENT 1 CONNECTION:
+   Addresses difficulty distinguishing dishes
+   within RAFI's lengthy mobile menus.
+   ========================================== */
+
+/* Provide comfortable spacing beneath the
+   menu introduction. */
+
+.menu-intro {
+  margin-bottom: 28px;
+  color: var(--color-text);
+}
+
+/* Override the general main-section styling
+   for nested menu categories.
+
+   This prevents unnecessary white cards
+   and excessive margins inside the menu. */
+
+main .menu-category {
+  background: transparent;
+  padding: 0;
+  margin: 0 0 28px;
+  border-radius: 0;
+}
+
+/* Create a strong visual heading for each
+   menu category.
+
+   A dark background visually separates
+   categories when scrolling on mobile. */
+
+.menu-category h3 {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+
+  font-size: 20px;
+  padding: 14px 18px;
+  margin: 0 0 16px;
+
+  border-radius: 5px;
+}
+
+/* Separate individual dishes using borders
+   and comfortable spacing.
+
+   This makes it easier for customers to
+   scan names, descriptions and prices. */
+
+.menu-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #d8c9bb;
+}
+
+/* Remove the border from the final dish
+   within each category. */
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+/* Arrange dish names and prices in a row.
+
+   Flexbox allows the price to stay aligned
+   on the right while the dish name wraps. */
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* Style dish names as clear subheadings. */
+
+.menu-item h4 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--color-brown);
+}
+
+/* Keep prices visually distinct and prevent
+   them from wrapping onto multiple lines. */
+
+.menu-price {
+  font-weight: bold;
+  color: var(--color-brown);
+  white-space: nowrap;
+}
+
+/* Style dish descriptions with comfortable
+   line spacing and a readable text colour. */
+
+.menu-item p {
+  margin: 8px 0 12px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Give dietary information a distinctive
+   visual treatment.
+
+   Text labels are used alongside colour so
+   dietary information is not communicated
+   through colour alone. */
+
+.dietary-label {
+  display: inline-block;
+
+  padding: 4px 10px;
+  background-color: #e9f0e4;
+  color: #315b36;
+
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ==========================================
+   RESPONSIVE MENU ADJUSTMENTS
+   ========================================== */
+
+/* Apply slightly larger spacing on tablets
+   and desktop screens, where space allows. */
+
+@media (min-width: 768px) {
+  .menu-item {
+    padding: 20px 0;
+  }
+
+  .menu-item h4 {
+    font-size: 19px;
+  }
+
+  .menu-item p {
+    font-size: 16px;
+  }
+}
+
+/* ==========================================
+   SECTION 8: INTERACTIVE MENU CATEGORIES
+
+   PURPOSE:
+   Style the expandable menu controls.
+
+   UX CONNECTION:
+   Collapsible categories reduce scrolling
+   and improve navigation on mobile devices.
+
+   ACCESSIBILITY:
+   Buttons retain keyboard focus indicators.
+   Hidden content is removed from the layout.
+   ========================================== */
+
+/* Remove the original heading background
+   and padding because the button will now
+   provide the visible brown background. */
+
+.menu-category h3 {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+/* Make the entire category heading clickable.
+
+   Width 100% ensures a large touch target.
+   Flexbox separates the label and arrow.
+*/
+
+.category-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  min-height: 56px;
+  padding: 14px 18px;
+
+  background-color: var(--color-brown);
+  color: var(--color-white);
+
+  border: none;
+  border-radius: 5px;
+
+  font: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+/* Provide visual feedback when someone
+   hovers over a category button. */
+
+.category-toggle:hover {
+  background-color: #67402e;
+}
+
+/* Display a plus or minus symbol.
+
+   JavaScript updates the aria-expanded
+   attribute when the category changes state.
+
+   CSS uses that attribute to determine
+   which symbol should be displayed.
+*/
+
+.toggle-icon::before {
+  content: "−";
+  font-size: 24px;
+}
+
+/* The closed state displays a plus symbol.
+
+   aria-expanded is updated by JavaScript,
+   keeping visual and accessibility states
+   consistent.
+*/
+
+.category-toggle[aria-expanded="false"] .toggle-icon::before {
+  content: "+";
+}
+
+/* Hide collapsed content only when JavaScript
+   has successfully initialised.
+
+   Without JavaScript, this rule does not apply
+   and the entire menu remains visible.
+*/
+
+.js-enabled .menu-content:not(.is-open) {
+  display: none;
+}
+
+/* Preserve clear focus indicators for
+   keyboard users.
+
+   The outline contrasts with the white
+   content area around the category button.
+*/
+
+.category-toggle:focus-visible {
+  outline: 3px solid #176b91;
+  outline-offset: 4px;
+}
+
+/* Disable decorative transitions for users
+   who have requested reduced motion.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  .category-toggle {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   SECTION 9: VENUE-SPECIFIC BOOKINGS
+
+   PURPOSE:
+   Support a clear reservation action while
+   explaining the external booking destination.
+
+   ASSESSMENT 1 CONNECTION:
+   Eliminates unnecessary venue reselection
+   and improves booking journey continuity.
+   ========================================== */
+
+/* Add comfortable spacing around the
+   primary booking action. */
+
+.booking-button {
+  margin: 8px 0 12px;
+  text-align: center;
+}
+
+/* Explain where the reservation link leads.
+
+   Slightly smaller text distinguishes this
+   information from the main booking action
+   without making it difficult to read. */
+
+.booking-notice {
+  margin-top: 12px;
+  margin-bottom: 0;
+
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* On narrow screens, allow the booking
+   button to occupy the available width.
+
+   This makes the action more prominent
+   and provides a generous touch target. */
+
+@media (max-width: 480px) {
+  #booking .booking-button {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   SECTION 10: RESPONSIVE MOBILE NAVIGATION
+
+   PURPOSE:
+   Display a compact navigation menu on mobile
+   and horizontal navigation on desktop.
+
+   PROGRESSIVE ENHANCEMENT:
+   When JavaScript is disabled, navigation
+   links remain visible and functional.
+   ========================================== */
+
+/* The HTML hidden attribute must be respected
+   even though the button has display styling. */
+
+.mobile-menu-button[hidden] {
+  display: none;
+}
+
+/* Style the mobile menu button.
+
+   A large touch target supports users
+   navigating on smaller devices.
+*/
+
+.mobile-menu-button {
+  display: none;
+  margin: 0 auto;
+  padding: 10px 18px;
+  min-width: 48px;
+  min-height: 48px;
+
+  background-color: var(--color-brown);
+  color: var(--color-white);
+
+  border: 2px solid var(--color-white);
+  border-radius: 5px;
+
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Give keyboard users a visible focus
+   indicator on the menu button. */
+
+.mobile-menu-button:focus-visible {
+  outline: 3px solid #176b91;
+  outline-offset: 4px;
+}
+
+/* Mobile-specific navigation layout. */
+
+@media (max-width: 600px) {
+  /* Position the button directly beneath
+       the website header. */
+
+  .js-enabled .mobile-menu-button {
+    display: block;
+    width: calc(100% - 32px);
+    background-color: var(--color-brown);
+  }
+
+  /* Change navigation links to a vertical
+       layout when JavaScript is active. */
+
+  .js-enabled nav {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  /* Hide navigation links when the
+       mobile menu is collapsed. */
+
+  .js-enabled nav:not(.nav-open) {
+    display: none;
+  }
+
+  /* Keep links large and easy to tap. */
+
+  .js-enabled nav a {
+    display: block;
+    padding: 14px 18px;
+  }
+}
+
+/* Preserve existing navigation behaviour
+   on screens wider than 600 pixels. */
+
+@media (min-width: 601px) {
+  .mobile-menu-button {
+    display: none !important;
+  }
+}
+
+/* ==========================================
+   SECTION 11: CONTACT FORM - ENTRY 007
+
+   PURPOSE:
+   Provide readable form fields, clear labels,
+   accessible errors and consistent styling.
+
+   UX CONNECTION:
+   Forms should minimise user errors and
+   provide clear feedback when problems occur.
+   ========================================== */
+
+/* Add spacing between form fields. */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Display each label above its input.
+
+   Keeping labels visible helps users remember
+   the information required in each field. */
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: var(--color-brown);
+  font-weight: bold;
+}
+
+/* Apply consistent styling to text inputs,
+   dropdowns and the message field. */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+
+  border: 1px solid #88776c;
+  border-radius: 5px;
+
+  background-color: var(--color-white);
+  color: var(--color-text);
+
+  font: inherit;
+  font-size: 16px;
+}
+
+/* Allow vertical resizing without letting
+   the message field overflow its container. */
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Provide visible keyboard focus for
+   all form controls. */
+
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 3px solid #176b91;
+  outline-offset: 2px;
+}
+
+/* Highlight invalid fields using a border.
+
+   Error messages also contain text so users
+   do not need to interpret colour alone. */
+
+.form-group [aria-invalid="true"] {
+  border: 2px solid #b42318;
+}
+
+/* Display validation errors beneath the
+   relevant form field. */
+
+.field-error {
+  display: block;
+  margin-top: 5px;
+
+  color: #a11d16;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Keep the prototype disclaimer visible. */
+
+.form-disclaimer {
+  padding: 12px;
+  margin-bottom: 24px;
+
+  background-color: #f6ecdf;
+  border-left: 4px solid var(--color-orange);
+
+  font-size: 14px;
+}
+
+/* Style the form submission button. */
+
+.submit-button {
+  display: inline-block;
+  min-height: 48px;
+  padding: 12px 24px;
+
+  background-color: var(--color-orange);
+  color: var(--color-white);
+
+  border: none;
+  border-radius: 5px;
+
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Provide clear hover and keyboard states. */
+
+.submit-button:hover {
+  background-color: var(--color-brown);
+}
+
+.submit-button:focus-visible {
+  outline: 3px solid #176b91;
+  outline-offset: 4px;
+}
+
+/* Reserve space for submission feedback
+   without displaying an empty paragraph. */
+
+#form-status:empty {
+  display: none;
+}
+
+#form-status:not(:empty) {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 5px;
+
+  background-color: #e9f0e4;
+  color: #315b36;
+}
+
+/* Show errors differently from successful
+   validation feedback. */
+
+#form-status.form-status-error {
+  background-color: #fff0ee;
+  color: #a11d16;
+}
+
+/* On small screens, make the submit button
+   easier to reach and activate. */
+
+@media (max-width: 480px) {
+  .submit-button {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   SECTION 12: ACCESSIBILITY REFINEMENTS
+
+   REVIEW BEFORE GIT COMMIT
+
+   PURPOSE:
+   Improve colour contrast on primary actions
+   while retaining the RAFI-inspired palette.
+
+   WCAG CONNECTION:
+   Normal-sized text should achieve a contrast
+   ratio of at least 4.5:1 against its background.
+   ========================================== */
+
+/* Use a darker orange behind white button text. */
+
+:root {
+  --color-orange-button: #b74a0e;
+}
+
+/* Apply the higher-contrast colour to the
+   booking link and enquiry submit button. */
+
+#booking a,
+.submit-button {
+  background-color: var(--color-orange-button);
+}
+
+/* Improve hover feedback on navigation links
+   by using the same higher-contrast orange. */
+
+nav a:hover {
+  background-color: var(--color-orange-button);
+}
