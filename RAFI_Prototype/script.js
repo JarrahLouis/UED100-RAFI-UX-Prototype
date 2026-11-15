@@ -367,4 +367,16 @@ if (contactForm && formStatus) {
       formStatus.classList.add("form-status-error");
     }
   });
+
+  // Enable submission only after the JavaScript
+  // validation handler has been registered.
+  //
+  // Without JavaScript, the button remains
+  // disabled and cannot submit form data.
+
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+
+  if (submitButton) {
+    submitButton.disabled = false;
+  }
 }

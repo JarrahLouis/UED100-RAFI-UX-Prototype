@@ -948,3 +948,11 @@ nav a:hover {
   line-height: 1.5;
   text-align: center;
 }
+
+/* Make the unavailable form action visually clear
+   when JavaScript is disabled. */
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
